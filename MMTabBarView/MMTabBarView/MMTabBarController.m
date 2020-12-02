@@ -1,17 +1,17 @@
 //
-//  MMTabBarViewler.m
+//  MMTabBarController.m
 //  MMTabBarView
 //
 //  Created by Kent Sutherland on 11/24/06.
 //  Copyright 2006 Kent Sutherland. All rights reserved.
 //
 
-#import "MMTabBarController.h"
-#import "MMTabBarView.h"
-#import "MMAttachedTabBarButton.h"
-#import "MMTabStyle.h"
+#import <MMTabBarView/MMTabBarController.h>
+#import <MMTabBarView/MMTabBarView.h>
+#import <MMTabBarView/MMAttachedTabBarButton.h>
+#import <MMTabBarView/MMTabStyle.h>
 #import "NSString+MMTabBarViewExtensions.h"
-#import "MMTabBarView.Private.h"
+#import <MMTabBarView/MMTabBarView.Private.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -420,8 +420,15 @@ static NSInteger potentialMinimumForArray(NSArray<NSNumber *> *array, NSInteger 
     
     __block NSRect buttonRect = _tabBarView.genericButtonRect;
 
-    [_tabBarView enumerateAttachedButtons:buttons inRange:NSMakeRange(0, widths.count) withOptions:MMAttachedButtonsEnumerationUpdateButtonState|MMAttachedButtonsEnumerationUpdateTabStateMask usingBlock:
-        ^(MMAttachedTabBarButton *aButton, NSUInteger idx, MMAttachedTabBarButton *previousButton, MMAttachedTabBarButton *nextButton, BOOL *stop) {
+    [_tabBarView enumerateAttachedButtons:  buttons
+                                  inRange:  NSMakeRange(0, widths.count)
+                              withOptions:  MMAttachedButtonsEnumerationUpdateButtonState
+                                          | MMAttachedButtonsEnumerationUpdateTabStateMask
+                               usingBlock:^( MMAttachedTabBarButton *aButton,
+                                             NSUInteger idx,
+                                             MMAttachedTabBarButton *previousButton,
+                                             MMAttachedTabBarButton *nextButton,
+                                             BOOL *stop) {
 
 			MMTabBarView* const tabBarView = self.tabBarView;
             if ([tabBarView.delegate respondsToSelector:@selector(tabView:toolTipForTabViewItem:)]) {

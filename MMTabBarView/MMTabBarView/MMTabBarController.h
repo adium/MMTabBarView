@@ -1,5 +1,5 @@
 //
-//  MMTabBarViewler.h
+//  MMTabBarController.h
 //  MMTabBarView
 //
 //  Created by Kent Sutherland on 11/24/06.
@@ -7,6 +7,9 @@
 //
 
 #if __has_feature(modules)
+#if __has_warning("-Watimport-in-framework-header")
+#pragma clang diagnostic ignored "-Watimport-in-framework-header"
+#endif
 @import Cocoa;
 #else
 #import <Cocoa/Cocoa.h>

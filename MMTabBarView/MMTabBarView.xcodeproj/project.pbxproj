@@ -831,16 +831,23 @@
 		06DB239C1609F5820071BDA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Michael Monscheuer";
+				TargetAttributes = {
+					06DB23A51609F5820071BDA0 = {
+						DevelopmentTeam = PYTBE5VFE5;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 06DB239F1609F5820071BDA0 /* Build configuration list for PBXProject "MMTabBarView" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
 				en,
+				Base,
 			);
 			mainGroup = 06DB239A1609F5820071BDA0;
 			productRefGroup = 06DB23A71609F5830071BDA0 /* Products */;
@@ -1026,6 +1033,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1039,6 +1047,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1072,6 +1081,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -1085,6 +1095,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1112,14 +1123,18 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PYTBE5VFE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "MMTabBarView/MMTabBarView-Prefix.pch";
-				INFOPLIST_FILE = "MMTabBarView/MMTabBarView-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.monscheuer.${PRODUCT_NAME:rfc1034identifier}";
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.MMTabBarView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1130,14 +1145,18 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PYTBE5VFE5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "MMTabBarView/MMTabBarView-Prefix.pch";
-				INFOPLIST_FILE = "MMTabBarView/MMTabBarView-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.monscheuer.${PRODUCT_NAME:rfc1034identifier}";
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adiumX.MMTabBarView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
