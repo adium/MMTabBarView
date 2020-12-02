@@ -11,6 +11,9 @@
  */
 
 #if __has_feature(modules)
+#if __has_warning("-Watimport-in-framework-header")
+#pragma clang diagnostic ignored "-Watimport-in-framework-header"
+#endif
 @import Cocoa;
 #else
 #import <Cocoa/Cocoa.h>
@@ -53,7 +56,7 @@ FOUNDATION_EXPORT const unsigned char MMTabBarViewVersionString[];
 NS_ASSUME_NONNULL_BEGIN
 
 @class MMRolloverButton;
-@class MMTabBarViewler;
+@class MMTabBarController;
 @class MMTabBarButton;
 @class MMAttachedTabBarButton;
 @class MMSlideButtonsAnimation;
@@ -113,6 +116,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Check if overflow button is currently visible
  */
 @property (readonly) BOOL isOverflowButtonVisible;
+
+/**
+ *  Check if overflow button is currently visible
+ */
+@property (readonly) MMOverflowPopUpButton* overflowPopUpButton;
 
 /**
  *  Get window's active state
@@ -656,14 +664,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)accessibilityStringForTabView:(NSTabView *)aTabView objectCount:(NSInteger)objectCount;
 
     // Deprecated Methods
-- (BOOL)tabView:(NSTabView *)aTabView shouldDragTabViewItem:(NSTabViewItem *)tabViewItem fromTabBar:(id)tabBarControl __attribute__((deprecated("implement -tabView:shouldDragTabViewItem:inTabBarView: instead.")));
-- (BOOL)tabView:(NSTabView *)aTabView shouldDropTabViewItem:(NSTabViewItem *)tabViewItem inTabBar:(id)tabBarControl __attribute__((deprecated("implement -tabView:shouldDropTabViewItem:inTabBarView: instead.")));
-- (BOOL)tabView:(NSTabView *)aTabView shouldAllowTabViewItem:(NSTabViewItem *)tabViewItem toLeaveTabBar:(id)tabBarControl __attribute__((deprecated("implement -tabView:shouldAllowTabViewItem:toLeaveTabBarView: instead.")));
-- (void)tabView:(NSTabView*)aTabView didDropTabViewItem:(NSTabViewItem *)tabViewItem inTabBar:(id)tabBarControl __attribute__((deprecated("implement -tabView:didDropTabViewItem:inTabBarView: instead.")));
+- (BOOL)tabView:(NSTabView *)aTabView shouldDragTabViewItem:(NSTabViewItem *)tabViewItem fromTabBar:(id)tabBarView __attribute__((deprecated("implement -tabView:shouldDragTabViewItem:inTabBarView: instead.")));
+- (BOOL)tabView:(NSTabView *)aTabView shouldDropTabViewItem:(NSTabViewItem *)tabViewItem inTabBar:(id)tabBarView __attribute__((deprecated("implement -tabView:shouldDropTabViewItem:inTabBarView: instead.")));
+- (BOOL)tabView:(NSTabView *)aTabView shouldAllowTabViewItem:(NSTabViewItem *)tabViewItem toLeaveTabBar:(id)tabBarView __attribute__((deprecated("implement -tabView:shouldAllowTabViewItem:toLeaveTabBarView: instead.")));
+- (void)tabView:(NSTabView*)aTabView didDropTabViewItem:(NSTabViewItem *)tabViewItem inTabBar:(id)tabBarView __attribute__((deprecated("implement -tabView:didDropTabViewItem:inTabBarView: instead.")));
 - (id)tabView:(NSTabView *)aTabView newTabBarForDraggedTabViewItem:(NSTabViewItem *)tabViewItem atPoint:(NSPoint)point __attribute__((deprecated("implement -tabView:newTabBarViewForDraggedTabViewItem:atPoint: instead.")));
-- (void)tabView:(NSTabView *)aTabView tabBarDidHide:(id)tabBarControl __attribute__((deprecated("implement -tabView:tabBarViewDidHide: instead.")));
-- (void)tabView:(NSTabView *)aTabView tabBarDidUnhide:(id)tabBarControl __attribute__((deprecated("implement -tabView:tabBarViewDidUnhide: instead.")));
-- (CGFloat)desiredWidthForVerticalTabBar:(id)tabBarControl DEPRECATED_ATTRIBUTE;
+- (void)tabView:(NSTabView *)aTabView tabBarDidHide:(id)tabBarView __attribute__((deprecated("implement -tabView:tabBarViewDidHide: instead.")));
+- (void)tabView:(NSTabView *)aTabView tabBarDidUnhide:(id)tabBarView __attribute__((deprecated("implement -tabView:tabBarViewDidUnhide: instead.")));
+- (CGFloat)desiredWidthForVerticalTabBar:(id)tabBarView DEPRECATED_ATTRIBUTE;
 
 - (NSDragOperation)tabView:(NSTabView *)aTabView shouldDropTabViewItem:(NSTabViewItem *)tabViewItem inTabBarView:(MMTabBarView *)tabBarView __attribute__((deprecated("implement -tabView:validateDrop:proposedIndex:inTabBarView: instead.")));
 
