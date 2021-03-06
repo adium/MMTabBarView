@@ -835,7 +835,7 @@
 				ORGANIZATIONNAME = "Michael Monscheuer";
 				TargetAttributes = {
 					06DB23A51609F5820071BDA0 = {
-						DevelopmentTeam = PYTBE5VFE5;
+						DevelopmentTeam = VQ6ZEL8UD3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1126,7 +1126,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PYTBE5VFE5;
+				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1148,7 +1148,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PYTBE5VFE5;
+				DEVELOPMENT_TEAM = VQ6ZEL8UD3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
